@@ -334,7 +334,7 @@ export namespace Moralis {
   type Web3ProviderType =
     | 'metamask'
     | 'walletconnect'
-    | 'walletConnect'
+    | 'walletConnectElectron'
     | 'wc'
     | 'magicLink'
     | 'web3Auth';
@@ -352,6 +352,13 @@ export namespace Moralis {
     mobileLinks?: string[];
     newSession?: boolean;
   }
+
+  interface WalletConnectWeb3ConnectElectronorEnableOptions extends CommonEnableOptions {
+    chainId?: number;
+    mobileLinks?: string[];
+    newSession?: boolean;
+  }
+
   interface NetworkWeb3ConnectorEnableOptions extends CommonEnableOptions {
     urls?: Record<string, string>;
     chainId?: number;
@@ -378,6 +385,7 @@ export namespace Moralis {
   type EnableOptions =
     | Web3InjectedConnectorEnableOptions
     | WalletConnectWeb3ConnectorEnableOptions
+    | WalletConnectWeb3ConnectElectronorEnableOptions
     | NetworkWeb3ConnectorEnableOptions
     | MagicWeb3ConnectorEnableOptions
     | Web3AuthWeb3ConnectorEnableOptions;

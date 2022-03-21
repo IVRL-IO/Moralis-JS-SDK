@@ -103,7 +103,6 @@
   "scripts": {
     "install:clean": "npm ci",
     "build": "node scripts/build_releases.js",
-    "release": "npm publish",
     "test": "cross-env PARSE_BUILD=node NODE_ENV=test jest",
     "test:ci": "cross-env PARSE_BUILD=node NODE_ENV=test jest",
     "lint": "eslint --cache src/ integration/",

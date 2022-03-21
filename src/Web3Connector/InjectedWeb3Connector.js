@@ -32,6 +32,8 @@ class InjectedWeb3Connector extends AbstractWeb3Connector {
   }
 
   async activate() {
+    // eslint-disable-next-line no-console
+    console.trace();
     this.verifyEthereumBrowser();
 
     const [accounts, chainId] = await Promise.all([
